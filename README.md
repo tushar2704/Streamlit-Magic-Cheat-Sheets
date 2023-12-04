@@ -8,6 +8,9 @@
 ## Deployment  [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://st-cheat-sheet.streamlit.app/)
 
 
+`Streamlit Magical Cheat Sheets` encapsulates the Streamlit documentation version 1.28.0, providing concise summaries along with exemplar implementations of Streamlit code snippets.
+
+**Version** `October, 2023 v1.1.2` 
 
 
 
