@@ -1,1 +1,1 @@
-# App-11
+# Streamlit Magical Cheat Sheets
