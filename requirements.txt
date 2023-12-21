@@ -1,0 +1,14 @@
+streamlit==1.29.0
+pathlib
+pybase64
+requests
+altair
+plotly
+bokeh==2.4.3
+pydeck
+graphviz
+scipy
+datetime
+pandas
+numpy
+-e.
