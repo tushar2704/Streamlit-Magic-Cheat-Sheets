@@ -1,4 +1,4 @@
-# Streamlit Magical Cheat Sheets 
+# Streamlit Magic Cheat Sheets 
 
 
 
