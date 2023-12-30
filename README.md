@@ -18,10 +18,11 @@
 
 The development and maintenance of this application are solely undertaken by [Tushar Aggarwal](https://www.linkedin.com/in/tusharaggarwalinseec/)
 
-![magic sheet home](https://github.com/tushar2704/Streamlit-Magic-Cheat-Sheet/assets/66141195/d907e2e0-efed-49a2-8d31-3ff683f11e27)
-![magic sheet 2](https://github.com/tushar2704/Streamlit-Magic-Cheat-Sheet/assets/66141195/cadb5a40-1402-4267-b63b-37b48eeef27d)
 
- 
+![2](https://github.com/tushar2704/Streamlit-Magic-Cheat-Sheets/assets/66141195/dec7cf04-e0cc-45d7-8c8c-bec90d92a91a)
+
+ ![Untitled design](https://github.com/tushar2704/Streamlit-Magic-Cheat-Sheets/assets/66141195/087cb3d6-b042-4f98-a07a-f66c1fd4c564)
+
 ## Author  
 - [<ins><b>©2023 Tushar Aggarwal. All rights reserved</b></ins>](https://www.tushar-aggarwal.com/)
 - <b>[LinkedIn](https://www.linkedin.com/in/tusharaggarwalinseec/)</b>
