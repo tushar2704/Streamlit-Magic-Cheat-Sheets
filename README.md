@@ -1353,4 +1353,378 @@ net = torchvision.models.resnet18(pretrained=False)
 criterion = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 
-for epoch in range(2
+for epoch in range(2):  # loop over the dataset multiple times
+
+    running_loss = 0.0
+    for i, data in enumerate(trainloader, 0):
+        # get the inputs; data is a list of [inputs, labels]
+        inputs, labels = data
+
+        # forward + backward + optimize
+        outputs = net(inputs)
+        loss = criterion(outputs, labels)
+        loss.backward()
+        optimizer.step()
+
+        # print statistics
+        running_loss += loss.item()
+        if i % 2000 == 1999:    # print every 2000 mini-batches
+            st.write(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 2000:.3f}')
+            running_loss = 0.0
+
+st.write('Finished Training')
+```
+
+### Streamlit with Hugging Face
+
+Streamlit can be integrated with Hugging Face, a popular open-source library for natural language processing (NLP). You can build and deploy NLP models, visualize model performance, and create interactive interfaces for text generation, sentiment analysis, and other NLP tasks.
+
+```python
+import streamlit as st
+from transformers import pipeline
+
+# Load the sentiment analysis pipeline
+sentiment_pipeline = pipeline("text-classification", model="distilbert-base-uncased-finetuned-sst-2-english")
+
+# Get user input
+text = st.text_area("Enter some text for sentiment analysis")
+
+# Perform sentiment analysis
+if text:
+    result = sentiment_pipeline(text)
+    st.write(f"Sentiment: {result['label']} (Score: {result['score']:.2f})")
+```
+
+### Streamlit with LangChain
+
+Streamlit can be integrated with LangChain, a framework for building applications with large language models (LLMs). You can build and deploy LLM-powered applications, create interactive interfaces for querying LLMs, and leverage LangChain's capabilities for tasks like question answering, text generation, and summarization.
+
+```python
+import streamlit as st
+from langchain import PromptTemplate, OpenAI, LLMChain
+
+# Set up the OpenAI LLM
+llm = OpenAI(model_name="text-davinci-003")
+
+# Define the prompt template
+template = """
+You are a helpful AI assistant. Given the following context, answer the question:
+
+Context: {context}
+
+Question: {question}
+"""
+prompt = PromptTemplate(template=template, input_variables=["context", "question"])
+
+# Create the LLM chain
+chain = LLMChain(prompt=prompt, llm=llm)
+
+# Get user input
+context = st.text_area("Enter the context")
+question = st.text_input("Enter your question")
+
+# Generate the answer
+if context and question:
+    answer = chain.run(context=context, question=question)
+    st.write(f"Answer: {answer}")
+```
+
+### Streamlit with OpenAI
+
+Streamlit can be integrated with OpenAI's API, allowing you to build applications that leverage OpenAI's language models, such as GPT-3. You can create interactive interfaces for text generation, question answering, and other natural language processing tasks.
+
+```python
+import streamlit as st
+import openai
+
+# Set up the OpenAI API key
+openai.api_key = "YOUR_API_KEY"
+
+# Get user input
+prompt = st.text_area("Enter your prompt")
+
+# Generate text using GPT-3
+if prompt:
+    response = openai.Completion.create(
+        engine="text-davinci-003",
+        prompt=prompt,
+        max_tokens=1024,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    generated_text = response.choices.text
+    st.write(f"Generated Text: {generated_text}")
+```
+
+## Streamlit Contributions
+
+Streamlit is an open-source project, and contributions from the community are welcome and encouraged. Here's how you can contribute to Streamlit:
+
+### Streamlit GitHub
+
+The Streamlit project is hosted on GitHub, where you can find the source code, report issues, and submit pull requests.
+
+- [Streamlit GitHub Repository](https://github.com/streamlit/streamlit)
+
+### Streamlit Issues
+
+If you encounter any bugs, issues, or have feature requests, you can report them on the Streamlit GitHub repository's issue tracker.
+
+- [Streamlit Issue Tracker](https://github.com/streamlit/streamlit/issues)
+
+### Streamlit Pull Requests
+
+If you want to contribute code changes or new features to Streamlit, you can submit a pull request on the GitHub repository.
+
+1. Fork the Streamlit repository.
+2. Create a new branch for your changes.
+3. Make your changes and commit them with descriptive commit messages.
+4. Push your changes to your forked repository.
+5. Submit a pull request to the Streamlit repository, describing your changes and their purpose.
+
+### Streamlit Code of Conduct
+
+Streamlit has a Code of Conduct that outlines the expectations for behavior and interactions within the project community. All contributors are expected to follow this code of conduct.
+
+- [Streamlit Code of Conduct](https://github.com/streamlit/streamlit/blob/develop/.github/CODE_OF_CONDUCT.md)
+
+## Streamlit FAQ
+
+Here are some frequently asked questions about Streamlit:
+
+1. **What is Streamlit?**
+   Streamlit is an open-source Python library that allows you to create interactive web applications for data science and machine learning projects with minimal effort.
+
+2. **How does Streamlit work?**
+   Streamlit uses a reactive programming model, where the app's user interface is automatically updated in response to user interactions or changes in the underlying data.
+
+3. **What are the advantages of using Streamlit?**
+   Streamlit offers several advantages, including ease of use, interactive widgets, data visualization capabilities, caching and state management, and easy deployment.
+
+4. **Can Streamlit be used for production applications?**
+   Yes, Streamlit can be used for production applications. It provides various deployment options, including Streamlit Sharing, Heroku, AWS, Azure, and GCP.
+
+5. **How does Streamlit handle state management?**
+   Streamlit provides built-in state management capabilities through the `st.session_state` and `st.state` objects, allowing you to store and retrieve data across sessions or within the same session.
+
+6. **Can Streamlit be integrated with other Python libraries?**
+   Yes, Streamlit can be integrated with various Python libraries, such as Pandas, NumPy, Scikit-Learn, TensorFlow, PyTorch, Hugging Face, and LangChain.
+
+7. **How can I contribute to Streamlit?**
+   You can contribute to Streamlit by reporting issues, submitting pull requests, or participating in the Streamlit community forums. Streamlit has a Code of Conduct that outlines the expectations for behavior and interactions within the project community.
+
+8. **What are some alternatives to Streamlit?**
+   Some alternatives to Streamlit include Dash, Voila, Panel, Bokeh, and Plotly Dash. Each library has its own strengths and weaknesses, and the choice depends on your specific requirements and preferences.
+
+9. **How can I learn more about Streamlit?**
+   You can learn more about Streamlit by exploring the official documentation, tutorials, books, courses, and community resources. Streamlit also provides a variety of examples to help you get started and learn by example.
+
+10. **Is Streamlit free to use?**
+    Yes, Streamlit is an open-source project and is free to use for both personal and commercial projects.
+
+## Streamlit Glossary
+
+Here are some common terms and concepts used in the Streamlit ecosystem:
+
+1. **Streamlit App**: A Python script that defines the user interface and functionality of a Streamlit application.
+
+2. **Streamlit Components**: Reusable UI elements that can be used to build Streamlit applications, such as buttons, sliders, and charts.
+
+3. **Streamlit Caching**: A mechanism provided by Streamlit to improve performance by caching the results of expensive computations or data transformations.
+
+4. **Streamlit Config**: A set of configuration options that can be used to customize the appearance and behavior of a Streamlit application.
+
+5. **Streamlit Deployment**: The process of making a Streamlit application available for others to use, either locally or on a remote server.
+
+6. **Streamlit Layout**: The arrangement and organization of UI elements within a Streamlit application.
+
+7. **Streamlit Sharing**: A free hosting service provided by Streamlit that allows you to share your Streamlit applications with others.
+
+8. **Streamlit State Management**: The process of managing and persisting application state across user interactions and sessions.
+
+9. **Streamlit Theming**: The process of customizing the appearance of a Streamlit application by modifying its CSS styles.
+
+10. **Streamlit Widgets**: Interactive UI elements provided by Streamlit, such as buttons, sliders, and text inputs, that allow users to interact with the application.
+
+## Streamlit Cheat Sheet
+
+Here's a concise cheat sheet for some of the most commonly used Streamlit functions and features:
+
+### Streamlit Write
+
+```python
+st.write("Hello, World!")  # Display text
+st.write(42)  # Display a number
+st.write()  # Display a list
+```
+
+### Streamlit Markdown
+
+```python
+st.markdown("# This is a Heading")  # Render Markdown
+```
+
+### Streamlit Widgets
+
+```python
+st.button("Click me")  # Button
+st.checkbox("Check me")  # Checkbox
+st.radio("Select an option", ["Option 1", "Option 2"])  # Radio buttons
+st.selectbox("Select an option", ["Option 1", "Option 2"])  # Dropdown
+st.multiselect("Select options", ["Option 1", "Option 2"])  # Multi-select
+st.slider("Select a value", 0, 100, 50)  # Slider
+st.text_input("Enter text")  # Text input
+st.text_area("Enter text")  # Text area
+st.date_input("Select a date")  # Date input
+st.time_input("Select a time")  # Time input
+st.file_uploader("Upload a file")  # File uploader
+st.color_picker("Select a color")  # Color picker
+```
+
+### Streamlit Data Display
+
+```python
+st.dataframe(df)  # Display a Pandas DataFrame
+st.metric("Temperature", "25°C", "1.2°C")  # Display a metric
+st.json(data)  # Display JSON data
+st.table(df)  # Display a table
+```
+
+### Streamlit Charts
+
+```python
+st.line_chart(data)  # Line chart
+st.area_chart(data)  # Area chart
+st.bar_chart(data)  # Bar chart
+st.pie_chart(data)  # Pie chart
+st.altair_chart(chart)  # Altair chart
+st.plotly_chart(fig)  # Plotly chart
+st.bokeh_chart(plot)  # Bokeh chart
+st.deck_gl_chart(viewport, layers)  # Deck.gl chart
+st.graphviz_chart(graph)  # Graphviz chart
+st.pyplot(fig)  # Matplotlib chart
+```
+
+### Streamlit Layout
+
+```python
+col1, col2 = st.columns(2)  # Create columns
+with st.expander("Click to expand"):  # Expander
+    st.write("This content is hidden by default.")
+with st.container():  # Container
+    st.write("This content is inside a container.")
+with st.sidebar:  # Sidebar
+    st.write("This content is in the sidebar.")
+```
+
+### Streamlit State Management
+
+```python
+if "count" not in st.session_state:  # Session state
+    st.session_state.count = 0
+st.button("Increment", on_click=increment_count)
+
+if "count" not in st.state:  # State
+    st.state.count = 0
+st.button("Increment", on_click=increment_count)
+```
+
+### Streamlit Caching
+
+```python
+@st.memo  # Memoization
+def fibonacci(n):
+    # ...
+
+@st.cache_data  # Cache data
+def load_data(path):
+    # ...
+
+@st.cache_resource  # Cache resource
+def load_data():
+    # ...
+```
+
+### Streamlit Theming
+
+```python
+st.set_page_config(page_title="My App", page_icon=":guardsman:", layout="wide")  # Config
+
+st.markdown("""
+<style>
+.stApp {
+    background-color: #F0F2F6;
+    color: #262730;
+}
+</style>
+""", unsafe_allow_html=True)  # Themes
+```
+
+### Streamlit Deployment
+
+```bash
+# Streamlit Sharing
+pip install streamlit-sharing
+streamlit-sharing deploy app.py
+
+# Streamlit Cloud
+pip install streamlit-cloud
+streamlit-cloud deploy app.py
+
+# Heroku
+heroku create my-streamlit-app
+git push heroku master
+
+# AWS Elastic Beanstalk
+eb init
+eb create my-streamlit-app
+eb deploy
+
+# Azure App Service
+az webapp up --name my-streamlit-app
+
+# GCP App Engine
+gcloud app deploy
+```
+
+## Streamlit Tips and Tricks
+
+Here are some tips and tricks to help you get the most out of Streamlit:
+
+1. **Use Caching**: Streamlit provides caching mechanisms to improve performance and reduce computation time. Use `@st.memo`, `@st.cache_data`, and `@st.cache_resource` to cache expensive computations or data transformations.
+
+2. **Leverage State Management**: Streamlit's state management capabilities (`st.session_state` and `st.state`) allow you to store and retrieve data across sessions or within the same session, enabling you to build stateful applications.
+
+3. **Modularize Your Code**: Break your Streamlit app into smaller, reusable components or functions to improve code organization and maintainability.
+
+4. **Use Streamlit Themes**: Customize the appearance of your Streamlit app by using the built-in theming system or creating your own custom CSS styles.
+
+5. **Optimize Data Loading**: If you're working with large datasets, consider loading and processing the data in a separate thread or process to avoid blocking the main Streamlit thread.
+
+6. **Leverage Streamlit Components**: Streamlit provides a variety of built-in components and widgets, as well as a community-contributed component library, to enhance the functionality and user experience of your app.
+
+7. **Utilize Streamlit Layouts**: Use Streamlit's layout features, such as columns, expanders, and containers, to organize and structure your app's content effectively.
+
+8. **Integrate with Other Libraries**: Streamlit can be integrated with various Python libraries, such as Pandas, NumPy, Scikit-Learn, TensorFlow, PyTorch, Hugging Face, and LangChain, to enhance its capabilities.
+
+9. **Leverage Streamlit Deployment Options**: Streamlit provides various deployment options, including Streamlit Sharing, Heroku, AWS, Azure, and GCP, allowing you to easily share and deploy your applications.
+
+10. **Participate in the Streamlit Community**: Join the Streamlit community forums, contribute to the project on GitHub, and stay up-to-date with the latest developments and best practices.
+
+## Streamlit Roadmap
+
+Streamlit is an actively developed and maintained project, with a roadmap that outlines the future plans and goals for the library. Here are some of the key areas and features that are part of the Streamlit roadmap:
+
+1. **Performance Improvements**: Streamlit aims to continuously improve the performance and responsiveness of the library, particularly for large-scale applications and datasets.
+
+2. **Enhanced Data Visualization**: Streamlit plans to expand its data visualization capabilities by integrating with more charting libraries and providing advanced visualization features, such as interactive dashboards and real-time updates.
+
+3. **Improved Theming and Customization**: Streamlit aims to provide more flexible and powerful theming options, allowing users to customize the appearance and branding of their applications more easily.
+
+4. **Streamlined Deployment**: Streamlit aims to simplify the deployment process further, making it easier to deploy applications to various platforms and environments.
+
+5. **Expanded Component Ecosystem**: Streamlit plans to foster a growing ecosystem of community-contributed components, enabling users to extend the functionality of their applications with reusable and modular components.
+
+6. **Improved Developer Experience**: Streamlit aims to enhance the developer experience by providing better tooling
