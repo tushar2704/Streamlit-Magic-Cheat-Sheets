@@ -1728,3 +1728,193 @@ Streamlit is an actively developed and maintained project, with a roadmap that o
 5. **Expanded Component Ecosystem**: Streamlit plans to foster a growing ecosystem of community-contributed components, enabling users to extend the functionality of their applications with reusable and modular components.
 
 6. **Improved Developer Experience**: Streamlit aims to enhance the developer experience by providing better tooling
+7. , improved debugging capabilities, and more comprehensive documentation and tutorials.
+
+7. **Collaboration and Sharing**: Streamlit plans to introduce features that facilitate collaboration and sharing of applications, enabling teams to work together more effectively on data science and machine learning projects.
+
+8. **Improved Accessibility**: Streamlit aims to enhance the accessibility of its applications, ensuring that they are usable by individuals with disabilities and comply with accessibility standards.
+
+9. **Expanded Language Support**: Streamlit plans to explore support for additional programming languages beyond Python, allowing developers from different backgrounds to leverage the power of Streamlit.
+
+10. **Integration with Cloud Services**: Streamlit aims to provide seamless integration with various cloud services, enabling users to leverage cloud resources for data storage, computation, and deployment.
+
+11. **Enhanced Security and Privacy**: Streamlit plans to implement additional security measures and privacy features to ensure the protection of sensitive data and compliance with relevant regulations.
+
+12. **Improved Scalability**: Streamlit aims to enhance the scalability of its applications, enabling them to handle large-scale data and high-concurrency workloads more efficiently.
+
+13. **Expanded Use Cases**: Streamlit plans to explore new use cases and domains beyond data science and machine learning, such as business intelligence, financial analytics, and scientific computing.
+
+14. **Community Engagement**: Streamlit aims to foster a strong and engaged community by encouraging contributions, providing support channels, and organizing events and meetups.
+
+The Streamlit roadmap is subject to change based on user feedback, technological advancements, and the evolving needs of the data science and machine learning communities. Streamlit's development team actively collaborates with the community to prioritize and implement new features and improvements.
+
+## Streamlit Changelog
+
+Streamlit maintains a detailed changelog that documents the changes, bug fixes, and new features introduced in each release. Here's a summary of some of the notable changes in recent Streamlit releases:
+
+### Version 1.19.0 (April 2023)
+
+- Added support for Streamlit Components in Streamlit Cloud and Streamlit Sharing.
+- Improved performance and memory usage for large Pandas DataFrames.
+- Introduced `st.metric()` for displaying metrics with optional delta values.
+- Added support for custom CSS in Streamlit Cloud and Streamlit Sharing.
+- Improved error handling and debugging capabilities.
+
+### Version 1.18.0 (March 2023)
+
+- Introduced `st.cache_resource()` for caching resources across sessions.
+- Added support for Streamlit Components in Streamlit Cloud.
+- Improved performance and memory usage for large datasets.
+- Introduced `st.set_page_config()` for configuring page settings.
+- Added support for custom themes in Streamlit Cloud and Streamlit Sharing.
+
+### Version 1.17.0 (February 2023)
+
+- Introduced `st.state` for managing state within a single session.
+- Added support for Streamlit Components in Streamlit Sharing.
+- Improved performance and memory usage for large datasets.
+- Introduced `st.deck_gl_chart()` for rendering Deck.gl visualizations.
+- Added support for custom CSS in Streamlit Sharing.
+
+### Version 1.16.0 (January 2023)
+
+- Introduced `st.cache_data()` for caching data across sessions.
+- Added support for Streamlit Components in local development.
+- Improved performance and memory usage for large datasets.
+- Introduced `st.graphviz_chart()` for rendering Graphviz visualizations.
+- Added support for custom CSS in local development.
+
+### Version 1.15.0 (December 2022)
+
+- Introduced `st.memo` for memoizing expensive computations.
+- Added support for Streamlit Components in Streamlit Cloud.
+- Improved performance and memory usage for large datasets.
+- Introduced `st.altair_chart()` for rendering Altair visualizations.
+- Added support for custom themes in Streamlit Cloud.
+
+For a complete list of changes and detailed release notes, please refer to the official Streamlit changelog: [Streamlit Changelog](https://github.com/streamlit/streamlit/blob/develop/changelog.md)
+
+## Streamlit License
+
+Streamlit is released under the Apache License 2.0, which is a permissive open-source license that allows for commercial and non-commercial use, modification, and distribution of the software.
+
+The Apache License 2.0 grants the following permissions:
+
+- **Commercial Use**: You can use Streamlit for commercial purposes, including in proprietary software.
+- **Modification**: You can modify the Streamlit source code and create derivative works.
+- **Distribution**: You can distribute copies of Streamlit, either in its original form or as part of your own software.
+- **Patent Grant**: The license includes a patent grant, which means that contributors to the project grant a patent license for their contributions.
+
+The Apache License 2.0 also includes the following requirements:
+
+- **License and Copyright Notice**: You must include the license and copyright notice in any copies or derivative works of Streamlit.
+- **State Changes**: If you modify the Streamlit source code, you must clearly indicate that changes were made.
+- **Disclaimer of Warranty**: The software is provided "as is," without warranty of any kind, express or implied.
+- **Limitation of Liability**: The contributors of Streamlit are not liable for any damages arising from the use of the software.
+
+By using Streamlit, you agree to comply with the terms and conditions of the Apache License 2.0. For more information, please refer to the official Apache License 2.0 documentation: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+## Streamlit Contributing
+
+Streamlit is an open-source project, and contributions from the community are welcome and encouraged. If you're interested in contributing to Streamlit, here are some guidelines to follow:
+
+1. **Fork the Repository**: Start by forking the Streamlit repository on GitHub. This will create a copy of the repository in your GitHub account.
+
+2. **Create a Branch**: Create a new branch in your forked repository for your changes. It's a good practice to use a descriptive branch name that reflects the purpose of your changes.
+
+3. **Make Changes**: Implement your changes or new features in your branch. Ensure that your code follows the Streamlit coding style and conventions.
+
+4. **Test Your Changes**: Before submitting your changes, make sure to test them thoroughly. Streamlit provides testing utilities and frameworks to help you write and run tests.
+
+5. **Commit Your Changes**: Commit your changes with clear and descriptive commit messages. This will help other contributors understand the purpose and context of your changes.
+
+6. **Push to Your Fork**: Push your branch with the committed changes to your forked repository on GitHub.
+
+7. **Submit a Pull Request**: Navigate to the original Streamlit repository on GitHub and submit a pull request (PR) from your forked branch. Provide a detailed description of your changes, including any relevant information or context.
+
+8. **Respond to Feedback**: The Streamlit maintainers and community members may provide feedback or request changes to your PR. Be responsive and address any concerns or suggestions raised.
+
+9. **Merge Your Changes**: Once your PR has been reviewed and approved, it will be merged into the Streamlit codebase by the maintainers.
+
+Before contributing, make sure to review the Streamlit Code of Conduct and follow the guidelines outlined in the project's contributing documentation. Additionally, it's recommended to familiarize yourself with the Streamlit development practices, coding style, and testing frameworks.
+
+By contributing to Streamlit, you'll be part of a vibrant community dedicated to improving and expanding the capabilities of this powerful data science and machine learning library.
+
+## Streamlit Code of Conduct
+
+The Streamlit project has adopted a Code of Conduct to ensure a respectful, inclusive, and harassment-free environment for all contributors and community members. The Code of Conduct outlines the expected behavior and guidelines for participation in the Streamlit project.
+
+Here are some key points from the Streamlit Code of Conduct:
+
+1. **Be Respectful**: Treat all individuals with respect, regardless of their background, identity, or experience. Harassment, discrimination, and offensive behavior will not be tolerated.
+
+2. **Be Inclusive**: Embrace diversity and create an inclusive environment where everyone feels welcome and valued. Respect different perspectives and experiences.
+
+3. **Be Professional**: Maintain a professional and constructive attitude in all interactions and communications related to the project. Avoid personal attacks, insults, or derogatory language.
+
+4. **Be Collaborative**: Collaborate openly and constructively with other community members. Provide and accept feedback graciously, and work together towards the project's goals.
+
+5. **Be Responsible**: Take responsibility for your actions and words. If you witness or experience any violation of the Code of Conduct, report it to the project maintainers.
+
+6. **Be Ethical**: Uphold ethical standards and act with integrity. Respect intellectual property rights, privacy, and confidentiality.
+
+7. **Be Mindful**: Be mindful of your words and actions, and consider how they may impact others. Avoid assumptions or biases, and strive to create a welcoming environment for all.
+
+The Streamlit Code of Conduct applies to all project spaces, including the codebase, issue tracker, pull requests, community forums, and any other project-related communication channels. Violations of the Code of Conduct may result in temporary or permanent consequences, as determined by the project maintainers.
+
+By participating in the Streamlit project, you agree to abide by the Code of Conduct and contribute to fostering a positive and inclusive community. For more details, please refer to the official Streamlit Code of Conduct: [Streamlit Code of Conduct](https://github.com/streamlit/streamlit/blob/develop/.github/CODE_OF_CONDUCT.md)
+
+## Streamlit Security
+
+Streamlit takes security seriously and follows best practices to ensure the safety and integrity of its applications and the data they handle. Here are some key security considerations and measures implemented by Streamlit:
+
+1. **Input Validation**: Streamlit performs input validation to prevent potential security vulnerabilities, such as cross-site scripting (XSS) and code injection attacks. User input is sanitized and validated before being processed or displayed.
+
+2. **Secure Deployment**: Streamlit provides secure deployment options, including Streamlit Sharing and Streamlit Cloud, which are hosted on secure infrastructure and follow industry-standard security practices.
+
+3. **Secure Communication**: When deploying Streamlit applications, communication between the client and server is encrypted using HTTPS to protect data in transit.
+
+4. **Dependency Management**: Streamlit relies on well-maintained and secure third-party dependencies, which are regularly updated to address potential vulnerabilities.
+
+5. **Secure Development Practices**: The Streamlit development team follows secure coding practices, including code reviews, static code analysis, and regular security audits.
+
+6. **Responsible Disclosure**: Streamlit has a responsible disclosure policy in place, encouraging security researchers and users to report any potential vulnerabilities or security issues they discover.
+
+7. **Regular Updates and Patches**: Streamlit releases regular updates and security patches to address any identified vulnerabilities or security concerns.
+
+8. **Security Documentation**: Streamlit provides documentation and guidelines on secure deployment, configuration, and usage of its applications, helping users implement security best practices.
+
+9. **Community Engagement**: Streamlit actively engages with the security community and encourages responsible disclosure of potential vulnerabilities, fostering a collaborative approach to security.
+
+While no software is completely immune to security risks, Streamlit is committed to maintaining a high level of security and continuously improving its security practices. Users are encouraged to follow best practices, keep their Streamlit installations up-to-date, and report any potential security issues through the appropriate channels.
+
+For more information on Streamlit's security practices and responsible disclosure policy, please refer to the official Streamlit documentation and community resources.
+
+## Streamlit Feedback
+
+Streamlit values feedback from its users and community members. Your feedback helps the Streamlit team understand your needs, identify areas for improvement, and prioritize future development efforts.
+
+Here are some ways you can provide feedback to the Streamlit team:
+
+1. **GitHub Issues**: If you encounter any bugs, issues, or have feature requests, you can open a new issue on the Streamlit GitHub repository: [Streamlit GitHub Issues](https://github.com/streamlit/streamlit/issues)
+
+2. **Community Forum**: Streamlit has an active community forum where you can share your feedback, ask questions, and engage with other users and developers: [Streamlit Community Forum](https://discuss.streamlit.io/)
+
+3. **Twitter**: You can share your feedback, experiences, or suggestions with the Streamlit team and community on Twitter: [Streamlit on Twitter](https://twitter.com/streamlit)
+
+4. **Email**: If you prefer to provide feedback directly to the Streamlit team, you can send an email to [hello@streamlit.io](mailto:hello@streamlit.io)
+
+5. **Surveys and Feedback Forms**: Streamlit occasionally conducts surveys or shares feedback forms to gather input from users on specific topics or features.
+
+When providing feedback, it's helpful to include the following information:
+
+- A clear and concise description of your feedback, issue, or feature request.
+- Steps to reproduce the issue (if applicable).
+- Any relevant error messages or logs.
+- Your use case or context for the feedback.
+- Screenshots or examples (if applicable).
+- Your Streamlit version and environment details.
+
+The Streamlit team values all feedback and takes it into consideration during the development and planning process. Your feedback helps shape the future of Streamlit and ensures that it continues to meet the needs of the data science and machine learning communities.
+
+Thank you for your contributions and for being part of the Streamlit community!
