@@ -186,3 +186,87 @@ To get started with Streamlit, you need to have Python installed on your system.
 
 ```bash
 pip install streamlit
+```
+
+Alternatively, you can install Streamlit in a virtual environment to keep your project dependencies isolated:
+
+```bash
+python -m venv myenv
+source myenv/bin/activate  # On Windows, use `myenv\Scripts\activate`
+pip install streamlit
+```
+
+### Running a Streamlit App
+
+To run a Streamlit app, create a Python file (e.g., `app.py`) and add your Streamlit code. Then, run the following command in your terminal or command prompt:
+
+```bash
+streamlit run app.py
+```
+
+This will start the Streamlit server and open your app in a new browser window.
+
+### Streamlit Hello World
+
+Here's a simple "Hello, World!" example to get you started with Streamlit:
+
+```python
+import streamlit as st
+
+st.title("Hello, World!")
+st.write("This is a Streamlit app.")
+```
+
+When you run this code with `streamlit run app.py`, you should see a web page with the title "Hello, World!" and the text "This is a Streamlit app."
+
+## Streamlit Magic
+
+Streamlit provides a variety of functions and widgets to create interactive web applications. Here are some of the most commonly used Streamlit features:
+
+### Streamlit Write
+
+The `st.write()` function is used to display text, data, and other objects in your Streamlit app. It can handle various data types, including strings, numbers, Pandas DataFrames, and more.
+
+```python
+import streamlit as st
+
+st.write("Hello, World!")
+st.write(42)
+st.write([1][2][3])
+```
+
+### Streamlit Markdown
+
+Streamlit supports Markdown formatting, allowing you to style your text with headings, lists, links, and more. You can use the `st.markdown()` function to render Markdown content.
+
+```python
+import streamlit as st
+
+st.markdown("# This is a Heading")
+st.markdown("- This is a bullet point")
+st.markdown("[This is a link](https://streamlit.io/)")
+```
+
+### Streamlit Titles
+
+You can add titles to your Streamlit app using the `st.title()` function.
+
+```python
+import streamlit as st
+
+st.title("My Streamlit App")
+```
+
+### Streamlit Headers
+
+Streamlit provides functions to add headers of different levels to your app.
+
+```python
+import streamlit as st
+
+st.header("This is a Header")
+st.subheader("This is a Subheader")
+```
+
+### Streamlit Text
+
